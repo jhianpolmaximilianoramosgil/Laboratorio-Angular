@@ -8,5 +8,5 @@ export class Persona{
         this.apellido = apellido;
     }
     */
-    constructor(public nombre:string, public apellido:string, public dni:number, public celular:number){}
+    constructor(public nombre:string, public apellido:string, public dni:string, public celular:string){}
 }
