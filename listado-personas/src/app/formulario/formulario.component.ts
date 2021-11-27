@@ -12,8 +12,8 @@ export class FormularioComponent implements OnInit {
 
   nombreInput:string;
   apellidoInput:string;
-  dniInput:number;
-  celularInput:number;
+  dniInput:string;
+  celularInput:string;
   
   constructor(private loggingService:LoggingService,
               private personasService:PersonasService ) { 
