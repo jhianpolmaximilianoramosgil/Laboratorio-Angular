@@ -1,0 +1,57 @@
+
+
+<section class="hero is-info">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title" style="color: rgb(79, 79, 184);">
+         MI CONVERTIDOR DE MEDIDAS - JR
+        </h1>
+      </div>
+    </div>
+  </section>
+  <div class="container is-max-desktop">
+    <div class="field">
+      <label class="label" style="color: rgb(79, 79, 184);">Ingrese Cantidad</label>
+      <div class="control">
+        <input class="input" type="number" (input)="convertir()" [(ngModel)]="cantidad" placeholder="Ingrese Cantidad">
+      </div>
+    </div>
+    <div class="field is-horizontal">
+      <div class="field-body">
+        <div class="field is-expanded">
+          <label class="label" style="color: rgb(79, 79, 184);">Tengo</label>
+          <div class="control">
+            <div class="select is-fullwidth">
+              <select [(ngModel)]="tengo" (change)="convertir()">
+                <option [value]="moneda.name" *ngFor="let moneda of monedas" >{{ moneda.desc }}</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="field is-expanded">
+          <label class="label" style="color: rgb(79, 79, 184);">Quiero</label>
+          <div class="control">
+            <div class="select is-fullwidth">
+              <select [(ngModel)]="quiero" (change)="convertir()">
+                <option [value]="moneda.name" *ngFor="let moneda of monedas" >{{ moneda.desc }}</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p *ngIf="cantidad > 0" class="is-size-4 has-text-centered" style="color: rgb(49, 49, 97);">{{ cantidad }} {{ tengo }} son {{ total | number: '0.0-2' }} {{ quiero }}</p>
+  </div>
+
+  <section class="hero is-warning">
+    <div class="hero-body">
+      <label>
+      <p class="title" style="color: rgb(79, 79, 184);">
+        MI SÉTIMA APP REALIZADA EN ANGULAR    
+      </p>
+      <p class="subtitle">
+       Hecho por: Jhianpol Ramos 
+      </p> 
+    </label>
+    </div>
+  </section>
